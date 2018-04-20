@@ -1,0 +1,37 @@
+ebay URL: http://www.ebay.co.uk/itm/201236618833?_trksid=p2057872.m2749.l2649&ssPageName=STRK%3AMEBIDX%3AIT
+
+New branded keypad by Rickard Security
+
+Professional Metal keypad access controller comes with a two year guarantee for product failure. The system can be bought with key tags or cards (please request a quote) which can be programmed into the unit by the number engraved or printed on them. The cards or tags can also be deleted by this method of keying in the number to delete so tags and fobs are easily removed and replaced from the system. This also gives greater flexibility in the future because if the reader fails the existing tags and fobs can be programmed into the new unit by the numbers. Also the tags or cards can be added in bulk by placing the tag to the reader in programming mode and adding in sequence.
+
+Product features
+Working Voltage: DC 12v
+Waterproof degree: IP68
+Environment Temperature: -45~60 degree centigrade
+Environment Humidity: 10%~90%
+Electric lock output: ≤3A
+Alarm output: ≤20A
+Output short-circuit protection time: ≤100µS
+Open-door time: 0~99 seconds (adjustable)
+Size: 120×56×18mm
+With Anti-theft alarm output for external alarm device
+With bult-in-anti-theft equipments
+Support enrolling cards continuously
+Perfect design, with backlight and fashion silver finish
+Waterproof design for outdoor use
+Strong standalone function device, can be used as WG26reader alone
+Capacity: 2000 user's cards, 2000 codes
+Access ways: cards, code, card + code
+Lower power: static current less than 30mA
+Support only keypad
+Users can reset private passwords
+Wiegand output W26 for card and W34 for codes
+Use keypad to delete lost cards for safety
+Short-circuit protect: when relay or alarm output short circuit, it will shut up in 100µS
+
+The unit is a single door multifunction standalone access controller, which is an ideal choice for door access for shops, households, commercial and industrial applications, such as, factories, warehouse, laboratories, banks and prisons.
+
+Model Card style Frequency range Waterproof
+
+S600E EM 125KHz 5-6cm yes
+

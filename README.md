@@ -2,7 +2,7 @@
 
 Doorbot is a door entry system for my house. It has four main components:
 
-1. Keypad & RFID reader unit outside the porch
+1. [Keypad & RFID reader unit](https://github.com/paulfurley/doorbot/blob/master/hardware/keypad) outside the front door
 
 2. Arduino connected to Keypad with Ethernet shield
 
