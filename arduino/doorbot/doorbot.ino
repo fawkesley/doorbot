@@ -11,9 +11,9 @@
  * - Wiegand DATA0 (Green) ----- Arduino PIN 2
  * - Wiegand DATA1 (White) ----- Arduino PIN 3
  *
- * Requires:
- * - https://github.com/paulfurley/Wiegand-Protocol-Library-for-Arduino
- * - https://github.com/mrRobot62/Arduino-logging-library
+ * Requires https://github.com/fawkesley/Wiegand-Protocol-Library-for-Arduino
+ * * download from [Github as ZIP file](https://github.com/fawkesley/Wiegand-Protocol-Library-for-Arduino/archive/refs/heads/master.zip)
+ * * In Arduino: Sketch > Include Library > Add .ZIP Library
  *
  */
 
