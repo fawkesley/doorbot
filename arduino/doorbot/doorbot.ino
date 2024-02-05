@@ -71,13 +71,6 @@ void setup() {
 }
 
 void loop() {
-  /*
-  Serial.println("Sending packet");
-  send_udp("hello");
-  delay(5000);
-  return;
-  */
-  
   if (!wg.available()) {
     check_for_pin_timeout();
 
