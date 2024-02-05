@@ -39,11 +39,14 @@ WIEGAND wg;
 String g_pin;
 unsigned long int g_millis_last_key = 0;
 
+unsigned long g_last_heartbeat = millis();
+const unsigned long g_heartbeat_every = 10000;
+
 EthernetUDP g_udp_socket; // An EthernetUDP instance to let us send and receive packets over UDP
 
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   wg.begin();
   Serial.println("Assigning IP...");
   Ethernet.begin(MY_MAC_ADDRESS, MY_IP_ADDRESS); //, ROUTER_IP, ROUTER_IP, IPAddress(255, 255, 255, 0));
@@ -76,8 +79,18 @@ void loop() {
   */
   
   if (!wg.available()) {
-    check_for_pin_timeout();    
-    return;
+    check_for_pin_timeout();
+
+    if (isDue(g_last_heartbeat, g_heartbeat_every)) {
+      Serial.println("sending heartbeat");
+
+      String payload("HEARTBEAT\n");
+      send_udp(payload.c_str());
+
+      g_last_heartbeat = millis();
+    }
+
+    return; // spin
   }
 
   unsigned long codeOrKey = wg.getCode();
@@ -208,4 +221,11 @@ void send_udp(const char* bytes) {
   g_udp_socket.beginPacket(DESTINATION_ADDRESS, DESTINATION_PORT);
   g_udp_socket.write(bytes);
   g_udp_socket.endPacket();
+}
+
+bool isDue(unsigned long start_timestamp, unsigned long desired_duration) {
+  unsigned long timestamp_now = millis();
+  unsigned long elapsed_duration = (timestamp_now - start_timestamp);
+
+  return elapsed_duration > desired_duration; // compare durations = OK
 }
