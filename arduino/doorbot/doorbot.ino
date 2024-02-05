@@ -1,7 +1,7 @@
 #include <Wiegand.h>
 
 
-#include <SPI.h>        
+#include <SPI.h>
 #include <Ethernet.h>
 #include <EthernetUdp.h>
 
@@ -17,7 +17,7 @@
  *
  */
 
-/* CONSTANT DEFINITIONS */ 
+/* CONSTANT DEFINITIONS */
 static const char ESCAPE = 27;
 static const char ENTER = 13;
 static const unsigned int MAX_PIN_LENGTH = 16;
@@ -63,11 +63,11 @@ void setup() {
   }
   Serial.println();
 
-  
+
   g_udp_socket.begin(SOURCE_PORT);
   Serial.println("Ready");
-  
-  
+
+
 }
 
 void loop() {
@@ -143,7 +143,7 @@ void submit_pin() {
   String payload("PIN ");
   payload += g_pin;
   payload += "\n";
-  
+
   send_udp(payload.c_str());
 
   reset_pin();
@@ -196,7 +196,7 @@ void handle_key_press(unsigned long key_code)
       if(g_pin.length() >= MAX_PIN_LENGTH) {
         submit_pin();
       }
-      
+
       return;
     }
 
@@ -212,7 +212,7 @@ char digit_to_ascii(unsigned long key_code) {
   /*
    * Return eg '1' for 1, '2' for 2 etc
    */
-   
+
    return '0' + key_code;
 }
 
